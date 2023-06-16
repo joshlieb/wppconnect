@@ -16,7 +16,7 @@
  */
 import boxen from 'boxen';
 import chalk from 'chalk';
-import latestVersion from 'latest-version';
+const latestVersion = await import('latest-version').then(x => x.default);
 import { defaultLogger as logger } from '../utils/logger';
 import { upToDate } from '../utils/semver';
 const { version } = require('../../package.json');
